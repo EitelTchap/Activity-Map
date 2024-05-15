@@ -1,94 +1,93 @@
-import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
-import {
-  GiBarn,
-  GiBoatFishing,
-  GiCactus,
-  GiCastle,
-  GiCaveEntrance,
-  GiForestCamp,
-  GiIsland,
-  GiWindmill,
-} from "react-icons/gi";
-import { FaSkiing } from "react-icons/fa";
-import { BsSnow } from "react-icons/bs";
-import { IoDiamond } from "react-icons/io5";
-import { MdOutlineVilla } from "react-icons/md";
+import { GiForestCamp } from "react-icons/gi";
+import { 
+  FaBasketballBall,
+  FaChessKnight,
+  FaBookReader,
+  FaRunning,
+  FaGamepad,
+  FaWater,
+  FaCat,
+  FaBeer,
+  FaQuestion,
+} from "react-icons/fa";
+import { MdGroups, MdOutlineSportsMartialArts,  MdEvent, MdExplore } from "react-icons/md";
+import { GiTennisRacket } from "react-icons/gi";
 
 export const categories = [
   {
-    label: "Beach",
-    icon: TbBeach,
-    description: "This property is close to the beach!",
+    label: "Balling",
+    icon: FaBasketballBall,
+    description: "This is a balling activity!",
   },
   {
-    label: "Windmills",
-    icon: GiWindmill,
-    description: "This property has a windmills!",
+    label: "Board Game",
+    icon: FaChessKnight,
+    description: "This is a board game activity!",
   },
   {
-    label: "Modern",
-    icon: MdOutlineVilla,
-    description: "This property is modern!",
+    label: "Learn",
+    icon: FaBookReader,
+    description: "This is a learning activity!",
   },
   {
-    label: "Countryside",
-    icon: TbMountain,
-    description: "This property is in the countryside!",
+    label: "Fitness",
+    icon: FaRunning,
+    description: "This is a fitness activity!",
   },
   {
-    label: "Pools",
-    icon: TbPool,
-    description: "This is property has a beautiful pool!",
+    label: "Gaming",
+    icon: FaGamepad,
+    description: "This is a gaming activity!",
   },
   {
-    label: "Islands",
-    icon: GiIsland,
-    description: "This property is on an island!",
+    label: "Water",
+    icon: FaWater,
+    description: "This is a water based activity!",
   },
   {
-    label: "Lake",
-    icon: GiBoatFishing,
-    description: "This property is near a lake!",
+    label: "Racket",
+    icon: GiTennisRacket,
+    description: "This is a racket activity!",
   },
   {
-    label: "Skiing",
-    icon: FaSkiing,
-    description: "This property has skiing activies!",
+    label: "Martial Arts",
+    icon: MdOutlineSportsMartialArts,
+    description: "This is a martial art activity!",
   },
   {
-    label: "Castles",
-    icon: GiCastle,
-    description: "This property is an ancient castle!",
+    label: "Animals",
+    icon: FaCat,
+    description: "This is an activity for animals",
   },
   {
-    label: "Caves",
-    icon: GiCaveEntrance,
-    description: "This property is in a spooky cave!",
+    label: "Networking",
+    icon: MdGroups,
+    description: "This is a networking activity!",
   },
   {
     label: "Camping",
     icon: GiForestCamp,
-    description: "This property offers camping activities!",
+    description: "This is a camping activity!",
   },
   {
-    label: "Arctic",
-    icon: BsSnow,
-    description: "This property is in arctic environment!",
+    label: "Events",
+    icon: MdEvent,
+    description: "This is an event activity!",
   },
   {
-    label: "Desert",
-    icon: GiCactus,
-    description: "This property is in the desert!",
+    label: "Explore",
+    icon: MdExplore,
+    description: "This is an exploration activity!",
   },
   {
-    label: "Barns",
-    icon: GiBarn,
-    description: "This property is in a barn!",
+    label: "Social",
+    icon: FaBeer,
+    description: "This is a social activity!",
   },
   {
-    label: "Lux",
-    icon: IoDiamond,
-    description: "This property is brand new and luxurious!",
+    label: "Others",
+    icon: FaQuestion,
+    description: "Other!",
   },
 ];
 
@@ -96,8 +95,8 @@ export const LISTINGS_BATCH = 16;
 
 export const menuItems = [
   {
-    label: "My trips",
-    path: "/trips",
+    label: "My activities",
+    path: "/activities",
   },
   {
     label: "My favorites",
@@ -108,7 +107,7 @@ export const menuItems = [
     path: "/reservations",
   },
   {
-    label: "My properties",
-    path: "/properties",
+    label: "My clubs",
+    path: "/clubs",
   },
 ];

@@ -9,7 +9,7 @@ import { getCurrentUser } from "@/services/user";
 import { getReservations } from "@/services/reservation";
 import { getFavorites } from "@/services/favorite";
 
-const TripsPage = async () => {
+const ActivitiesPage = async () => {
   const user = await getCurrentUser();
   const favorites = await getFavorites();
 
@@ -22,8 +22,8 @@ const TripsPage = async () => {
   if (listings.length === 0) {
     return (
       <EmptyState
-        title="No trips found"
-        subtitle="Looks like you haven't reserved any trips."
+        title="No activities found"
+        subtitle="Looks like you haven't joined any activities."
       />
     );
   }
@@ -31,7 +31,7 @@ const TripsPage = async () => {
   return (
     <section className="main-container">
       <Heading
-        title="Trips"
+        title="Activities"
         subtitle="Where you've been and where you're going."
         backBtn
       />
@@ -54,7 +54,7 @@ const TripsPage = async () => {
               nextCursor={nextCursor}
               fnArgs={{ userId: user.id }}
               queryFn={getReservations}
-              queryKey={["trips", user.id]}
+              queryKey={["activities", user.id]}
               favorites={favorites}
             />
           </Suspense>
@@ -64,4 +64,4 @@ const TripsPage = async () => {
   );
 };
 
-export default TripsPage;
+export default ActivitiesPage;

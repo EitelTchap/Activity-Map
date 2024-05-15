@@ -121,8 +121,8 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-6">
             <Heading
-              title="Where is your place located?"
-              subtitle="Help guests find you!"
+              title="Where is your club located?"
+              subtitle="Help people find you!"
             />
             <CountrySelect value={location} onChange={setCustomValue} />
             <div className="h-[240px]">
@@ -135,7 +135,7 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-6">
             <Heading
-              title="Share some basics about your place"
+              title="Share some basics about your club"
               subtitle="What amenitis do you have?"
             />
             <Counter
@@ -168,8 +168,8 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-6">
             <Heading
-              title="Add a photo of your place"
-              subtitle="Show guests what your place looks like!"
+              title="Add a photo of your activity"
+              subtitle="Show others what your club looks like!"
             />
             <ImageUpload
               onChange={setCustomValue}
@@ -182,7 +182,7 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-6">
             <Heading
-              title="How would you describe your place?"
+              title="How would you describe your club?"
               subtitle="Short and sweet works best!"
             />
             <Input
@@ -213,7 +213,7 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
           <div className="flex flex-col gap-6">
             <Heading
               title="Now, set your price"
-              subtitle="How much do you charge per night?"
+              subtitle="How much do you charge per session?"
             />
             <Input
               key="price"
@@ -235,7 +235,7 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
         return (
           <div className="flex flex-col gap-2">
             <Heading
-              title="Which of these best describes your place?"
+              title="Which of these best describes your club?"
               subtitle="Pick a category"
             />
             <div className="flex-1 grid grid-cols-2  gap-3 max-h-[60vh] lg:max-h-[260px] overflow-y-scroll scroll-smooth">
@@ -258,7 +258,7 @@ const RentModal = ({ onCloseModal }: { onCloseModal?: () => void }) => {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <Modal.WindowHeader title="Share your home!" />
+      <Modal.WindowHeader title="Share your club!" />
       <form
         className="flex-1  md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none "
         onSubmit={handleSubmit(onSubmit)}

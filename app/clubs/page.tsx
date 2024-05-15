@@ -6,10 +6,10 @@ import ListingCard from "@/components/ListingCard";
 import LoadMore from "@/components/LoadMore";
 
 import { getCurrentUser } from "@/services/user";
-import { getProperties } from "@/services/properties";
+import { getClubs } from "@/services/clubs";
 import { getFavorites } from "@/services/favorite";
 
-const PropertiesPage = async () => {
+const ClubsPage = async () => {
   const user = await getCurrentUser();
   const favorites = await getFavorites();
 
@@ -17,20 +17,20 @@ const PropertiesPage = async () => {
     return <EmptyState title="Unauthorized" subtitle="Please login" />;
   }
 
-  const { listings, nextCursor } = await getProperties({ userId: user.id });
+  const { listings, nextCursor } = await getClubs({ userId: user.id });
 
   if (!listings || listings.length === 0) {
     return (
       <EmptyState
-        title="No properties found"
-        subtitle="Looks like you have no properties."
+        title="No club found"
+        subtitle="Looks like you have no clubs."
       />
     );
   }
 
   return (
     <section className="main-container">
-      <Heading title="Properties" subtitle="List of your properties" backBtn/>
+      <Heading title="Clubs" subtitle="List of your clubs" backBtn/>
       <div className=" mt-8 md:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 md:gap-8 gap-4">
         {listings.map((listing) => {
           const hasFavorited = favorites.includes(listing.id);
@@ -47,8 +47,8 @@ const PropertiesPage = async () => {
             <LoadMore
               nextCursor={nextCursor}
               fnArgs={{ userId: user.id }}
-              queryFn={getProperties}
-              queryKey={["properties", user.id]}
+              queryFn={getClubs}
+              queryKey={["clubs", user.id]}
               favorites={favorites}
             />
           </Suspense>
@@ -58,4 +58,4 @@ const PropertiesPage = async () => {
   );
 };
 
-export default PropertiesPage;
+export default ClubsPage;

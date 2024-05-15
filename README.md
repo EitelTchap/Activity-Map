@@ -1,22 +1,22 @@
-# Airbnb Clone
+# Activity Map
 
-This is an Airbnb clone built with Next.js, TypeScript, Tailwind CSS, MongoDB, Prisma, Next auth, Leaflet and many other technologies.
+This is an Actvity Map web application built with Next.js, TypeScript, Tailwind CSS, MongoDB, Prisma, Next auth, Leaflet and many other technologies.
 
 ## Features
 
 - User registration and authentication
-- Property listing and browsing
-- Property booking and reservations
-- Search and filtering of properties
-- Interactive map using Leaflet to display property locations
+- Activity listing and browsing
+- Join clubs and contact leads
+- Search and filtering of actities
+- Interactive map using Leaflet to display activities locations
 
 ## Demo
 
-You can check out a live demo of the Airbnb clone project [here](https://airbnb-clone-phi-green.vercel.app/).
+You can check out a live demo of the ActivityMap project [here](https://activity-map.netlify.app/).
 
 ## Screenshots
 
-<kbd><img width="944" alt="vacationhub" src="https://github.com/sudeepmahato16/airbnb_clone/assets/122378993/f893e203-8a2d-4ff1-ae20-67e64187b770"></kbd>
+<kbd><img width="944" alt="Activity-map" src="https://github.com/sudeepmahato16/airbnb_clone/assets/122378993/f893e203-8a2d-4ff1-ae20-67e64187b770"></kbd>
 
 <kbd><img width="886" alt="login-modal" src="https://github.com/sudeepmahato16/airbnb_clone/assets/122378993/3d6675e0-6046-48dc-b55f-7ef318581ccd"></kbd>
 

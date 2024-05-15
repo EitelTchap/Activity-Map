@@ -8,9 +8,9 @@ import Providers from "@/components/Provider";
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VacationHub",
+  title: "Activity Map",
   description:
-    "Your Ultimate Destination Connection. Discover a world of endless possibilities and seamless vacation planning at VacationHub.",
+    "Join the fun and connect with like-minded enthusiasts at Activity Map! Discover exciting activities, forge new connections, and embark on unforgettable adventures. It's where passion meets people, and every moment is a chance to create lifelong memories.",
 };
 
 export default function RootLayout({

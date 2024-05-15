@@ -91,9 +91,9 @@ const ListingClient: React.FC<ListingClientProps> = ({
           startDate,
           totalPrice,
         });
-        router.push("/trips");
+        router.push("/activities");
         toast.success(`You've successfully reserved "${title}".`);
-        queryClient.invalidateQueries(["trips", user.id]);
+        queryClient.invalidateQueries(["activities", user.id]);
         queryClient.invalidateQueries(["reservations", user.id]);
       } catch (error: any) {
         toast.error(error?.message);

@@ -147,7 +147,7 @@ export const deleteReservation = async (reservationId: string) => {
 
     revalidatePath("/reservations");
     revalidatePath(`/listings/${reservation.listingId}`);
-    revalidatePath("/trips");
+    revalidatePath("/activities");
 
     return reservation;
   } catch (error: any) {

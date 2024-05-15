@@ -4,7 +4,7 @@ import { LISTINGS_BATCH } from "@/utils/constants";
 import { getCurrentUser } from "./user";
 import { revalidatePath } from "next/cache";
 
-export const getProperties = async (args?: Record<string, string>) => {
+export const getClubs = async (args?: Record<string, string>) => {
   try {
     const { userId, cursor } = args || {};
 
@@ -24,17 +24,17 @@ export const getProperties = async (args?: Record<string, string>) => {
       filterQuery.skip = 1;
     }
 
-    const properties = await db.listing.findMany({
+    const clubs = await db.listing.findMany({
       ...filterQuery,
     });
 
     const nextCursor =
-      properties.length === LISTINGS_BATCH
-        ? properties[LISTINGS_BATCH - 1].id
+      clubs.length === LISTINGS_BATCH
+        ? clubs[LISTINGS_BATCH - 1].id
         : null;
 
     return {
-      listings: properties,
+      listings: clubs,
       nextCursor,
     };
   } catch (error: any) {
@@ -45,7 +45,7 @@ export const getProperties = async (args?: Record<string, string>) => {
   }
 };
 
-export const deleteProperty = async (listingId: string) => {
+export const deleteClubs = async (listingId: string) => {
   try {
     const currentUser = await getCurrentUser();
 
@@ -66,13 +66,13 @@ export const deleteProperty = async (listingId: string) => {
 
     revalidatePath("/");
     revalidatePath("/reservation");
-    revalidatePath("/trips");
+    revalidatePath("/activities");
     revalidatePath("/favorites");
-    revalidatePath("/properties");
+    revalidatePath("/clubs");
     revalidatePath(`/listings/${listingId}`);
 
     return "success";
   } catch (error) {
-    throw new Error("Failed to delete the property!");
+    throw new Error("Failed to delete the club!");
   }
 };

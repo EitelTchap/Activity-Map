@@ -21,7 +21,7 @@ const Home: FC<HomeProps> = async ({ searchParams }) => {
     return (
       <EmptyState
         title="No Listings found"
-        subtitle="Looks like you have no properties."
+        subtitle="Looks like you have no clubs."
       />
     );
   }

@@ -33,7 +33,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
               type="button"
               className="hidden md:block text-sm font-bold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer text-[#585858]"
             >
-              Share your home
+              Share your club
             </button>
           </Modal.Trigger>
           <Menu>
@@ -60,7 +60,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
                   ))}
 
                   <Modal.Trigger name="share">
-                    <MenuItem label="Share your home" />
+                    <MenuItem label="Share your club" />
                   </Modal.Trigger>
                   <hr />
                   <MenuItem label="Log out" onClick={signOut} />
